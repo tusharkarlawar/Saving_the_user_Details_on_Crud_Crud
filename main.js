@@ -60,13 +60,35 @@ function onSubmit(event) {
     li.id = store.phone;
 
     axios.post("https://crudcrud.com/api/29a9226259c14f63a1bb4cf8dd68e5ba/appointmentData",store)
-        .then((respone) => {
-            console.log(respone)
+        .then((response) => {
+            console.log(response)
         })
         .catch((err)=> {
             console.log(err)
 
         })
+
+    window.addEventListener("DOMContentLoaded",() => {
+        axios.get("https://crudcrud.com/api/29a9226259c14f63a1bb4cf8dd68e5ba/appointmentData")
+        .then((response) => {
+            console.log(response)
+
+            for(var i=0;i<response.data.length;i++){
+                onSubmit(response.data[i])
+            }
+        })
+        .catch((err)=> {
+            console.log(err)
+
+        })
+
+   })
+
+
+    
+
+
+    
     
 
     
@@ -110,7 +132,7 @@ function removeItem(event, phoneInput) {
     if (confirm("Are you sure?")) {
       let li2 = event.target.parentElement;
 
-      localStorage.removeItem(phoneInput);
+     // localStorage.removeItem(phoneInput);
       userList.removeChild(li2);
     }
   }
