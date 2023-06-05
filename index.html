@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    
+</head>
+
+<body>
+    <div >
+        <section class="container-md custom-container" id="formSec">
+            <h1>Book a call</h1>
+            <h2>Book a call slot our represntative will respond within one hour of selected time.</h2><hr>
+            <form id="reg">
+                <div class="mb-2">
+                    <label for="name" >Name:</label><br>
+                    <input type="text" id="name" name="name">
+                </div>
+                <div class="mb-2">
+                    <label for="email" >Email:</label><br>
+                    <input type="email" id="email" name="e-mail">
+                </div>
+                <div class="mb-2">
+                    <label for="phone" >Phone No.:</label><br>
+                    <input type="tel" id="phone" name="phone">
+                </div>
+                <div class="mb-2">
+                    <label for="slot" >Date & Time:</label><br>
+                    <div class="row">
+                        <div class="col">
+                            <input type="date" id="date" name="date">
+                        </div>
+                        <div class="col">
+                            <input type="time" id="time" name="time"><br>
+                        </div>
+                    </div>
+                </div>
+                <div class="mb-2">
+                    <input type="submit" value="Get a call" id="submit">
+                </div>
+            </form>
+        </section>
+         <section class="container-md custom-container" >
+            <ul id="user"></ul>
+
+            <ul class="items">
+                <li class="item1">Item1</li>
+                <li class="item2">Item2</li>
+                <!-- <li class="item">Item3</li> -->
+            </ul>
+        </section>
+    </div>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/axios/1.4.0/axios.min.js"></script>
+
+
+    <script src="main.js"></script>
+</body>
+</html>
